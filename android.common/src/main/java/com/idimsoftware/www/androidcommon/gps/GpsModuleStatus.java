@@ -33,23 +33,9 @@ public class GpsModuleStatus {
     public static final int PAUSED = 5;
 
     private int _status;
-    private float _latitude;
-    private float _longitude;
-    private float _accuracy;
-    private float _bearing;
+    private Location _location;
 
     // Methods
-
-    /*
-    Updates the status and other data based on individual values.
-     */
-    public void set(int status, float latitude, float longitude, float accuracy, float bearing){
-        _status = status;
-        _latitude = latitude;
-        _longitude = longitude;
-        _accuracy = accuracy;
-        _bearing = bearing;
-    }
 
     /*
     Updates the status and other data based on a Location.
@@ -60,8 +46,7 @@ public class GpsModuleStatus {
         if (location.getAccuracy() < 1.0F)
             status = GpsModuleStatus.SEARCHING;
 
-        this.set(status, (float) location.getLatitude(), (float) location.getLongitude(),
-                location.getAccuracy(), location.getBearing());
+        _location = location;
     }
 
     // Properties
@@ -75,14 +60,16 @@ public class GpsModuleStatus {
     }
 
     public float getLatitude(){
-        return _latitude;
+        return (float) _location.getLatitude();
     }
 
     public float getLongitude(){
-        return _longitude;
+        return (float) _location.getLongitude();
     }
 
-    public float getAccuracy() { return _accuracy; }
+    public float getAccuracy() { return _location.getAccuracy(); }
 
-    public float getBearing() { return _bearing; }
+    public float getBearing() { return _location.getBearing(); }
+
+    public Location getLocation() { return _location; }
 }
