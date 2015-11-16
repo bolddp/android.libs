@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32cb9eca-a5e3-4643-9d12-86f86fa1b662" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android.common/src/main/java/com/idimsoftware/www/androidcommon/map/MapModule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android.common/src/main/java/com/idimsoftware/www/androidcommon/map/MapModuleListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android.common/android.common.iml" afterPath="$PROJECT_DIR$/android.common/android.common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android.common/build.gradle" afterPath="$PROJECT_DIR$/android.common/build.gradle" />
+    <list default="true" id="32cb9eca-a5e3-4643-9d12-86f86fa1b662" name="Default" comment="Added">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android.libs.iws" />
@@ -2089,6 +2088,10 @@
               <option name="myItemId" value="android.libs" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2360,7 +2363,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447694312058</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added MapModule">
+      <created>1447714155518</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1447714155518</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2416,7 +2425,8 @@
     <MESSAGE value="Moved Dialogs and Prefs here" />
     <MESSAGE value="Fix in GpsModuleStatus" />
     <MESSAGE value="Added Geodesy and web/json modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Geodesy and web/json modules" />
+    <MESSAGE value="Added MapModule" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MapModule" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
