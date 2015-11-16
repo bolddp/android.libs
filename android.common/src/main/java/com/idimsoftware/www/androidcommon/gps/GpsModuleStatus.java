@@ -46,6 +46,7 @@ public class GpsModuleStatus {
         if (location.getAccuracy() < 1.0F)
             status = GpsModuleStatus.SEARCHING;
 
+        _status = status;
         _location = location;
     }
 
