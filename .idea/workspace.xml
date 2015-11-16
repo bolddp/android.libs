@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32cb9eca-a5e3-4643-9d12-86f86fa1b662" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Daniel\Documents\_Projects\android.libs\.idea\libraries\appcompat_v7_23_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Daniel\Documents\_Projects\android.libs\.idea\libraries\support_annotations_23_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Daniel\Documents\_Projects\android.libs\.idea\libraries\support_v4_23_1_0.xml" afterPath="" />
+    <list default="true" id="32cb9eca-a5e3-4643-9d12-86f86fa1b662" name="Default" comment="Removed .idea xml files that shouldn't be checked in">
       <change type="DELETED" beforePath="C:\Users\Daniel\Documents\_Projects\android.libs\.idea\workspace.xml" afterPath="" />
     </list>
     <ignored path="android.libs.iws" />
@@ -2375,7 +2372,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447714339489</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Removed .idea xml files that shouldn't be checked in">
+      <created>1447714479793</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1447714479793</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2433,7 +2436,8 @@
     <MESSAGE value="Added Geodesy and web/json modules" />
     <MESSAGE value="Added MapModule" />
     <MESSAGE value="Added .gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .gitignore file" />
+    <MESSAGE value="Removed .idea xml files that shouldn't be checked in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed .idea xml files that shouldn't be checked in" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
