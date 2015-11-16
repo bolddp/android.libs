@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32cb9eca-a5e3-4643-9d12-86f86fa1b662" name="Default" comment="Removed .idea xml files that shouldn't be checked in">
+    <list default="true" id="32cb9eca-a5e3-4643-9d12-86f86fa1b662" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Daniel\Documents\_Projects\android.libs\.idea\workspace.xml" afterPath="" />
     </list>
     <ignored path="android.libs.iws" />
@@ -2378,7 +2378,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447714479793</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Removed workspace.xml">
+      <created>1447714650212</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1447714650212</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2437,7 +2443,8 @@
     <MESSAGE value="Added MapModule" />
     <MESSAGE value="Added .gitignore file" />
     <MESSAGE value="Removed .idea xml files that shouldn't be checked in" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed .idea xml files that shouldn't be checked in" />
+    <MESSAGE value="Removed workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
