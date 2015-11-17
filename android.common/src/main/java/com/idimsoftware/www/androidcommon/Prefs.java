@@ -76,4 +76,21 @@ public class Prefs {
     }
 
 
+    public static int getInt(Context context, String key, int defValue) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        return prefs.getInt(key, defValue);
+    }
+
+    /*
+     * Writes an integer from the default preferences.
+     */
+    public static void setInt(Context context, String key, int value) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        try {
+            editor.putInt(key, value);
+        } finally {
+            editor.commit();
+        }
+    }
 }
