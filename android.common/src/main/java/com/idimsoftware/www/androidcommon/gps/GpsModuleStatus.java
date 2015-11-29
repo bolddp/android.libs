@@ -1,6 +1,7 @@
 package com.idimsoftware.www.androidcommon.gps;
 
 import android.location.Location;
+import android.location.LocationManager;
 
 /**
  * Holds information about the current status of the Gps module.
@@ -35,6 +36,11 @@ public class GpsModuleStatus {
     private int _status;
     private Location _location;
 
+    public GpsModuleStatus() {
+        // Create an initial location object
+        _location = new Location(LocationManager.GPS_PROVIDER);
+    }
+
     // Methods
 
     /*
@@ -64,8 +70,16 @@ public class GpsModuleStatus {
         return (float) _location.getLatitude();
     }
 
+    public void setLatitude(float latitude) {
+        _location.setLatitude(latitude);
+    }
+
     public float getLongitude(){
         return (float) _location.getLongitude();
+    }
+
+    public void setLongitude(float longitude){
+        _location.setLongitude(longitude);
     }
 
     public float getAccuracy() { return _location.getAccuracy(); }
