@@ -11,8 +11,8 @@ public class JsonTaskError {
 	public JsonTaskError() {
 	}
 
-	public JsonTaskError(int code, String message){
-		Code = code;
+	public JsonTaskError(int id, String message){
+		Id = id;
 		Message = message;
 	}
 	
@@ -23,7 +23,7 @@ public class JsonTaskError {
 	 */
 	public int HttpStatusCode;
 	
-	public int Code;
+	public int Id;
 	
 	public String Message;
 	

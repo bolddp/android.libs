@@ -41,7 +41,7 @@ public class JsonTask extends AsyncTask<String, Integer, String> {
 	private String SerializeWebError(int responseCode, int errorCode, String errorMessage) {
 		JsonTaskError error = new JsonTaskError();
 		error.HttpStatusCode = responseCode;
-		error.Code = errorCode;
+		error.Id = errorCode;
 		error.Message = errorMessage;
 		
 		Gson gson = new Gson();
@@ -92,7 +92,7 @@ public class JsonTask extends AsyncTask<String, Integer, String> {
 
 			// Get the response or the error stream
 			FlushedInputStream inStream = null;
-			if (_responseCode == HttpURLConnection.HTTP_OK)
+			if (_responseCode < 300)
 				inStream = new FlushedInputStream(httpCon.getInputStream());
 			else
 				inStream = new FlushedInputStream(httpCon.getErrorStream());
