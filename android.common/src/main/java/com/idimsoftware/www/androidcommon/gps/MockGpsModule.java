@@ -15,18 +15,20 @@ public class MockGpsModule implements GpsModule {
     private GpsStatusListener _listener;
     private GpsModuleStatus _gpsModuleStatus;
 
+    public MockGpsModule() {
+        // Initialize the status
+        _gpsModuleStatus = new GpsModuleStatus();
+        _gpsModuleStatus.setLatitude(initialLatitude);
+        _gpsModuleStatus.setLongitude(initialLongitude);
+        _gpsModuleStatus.setStatus(GpsModuleStatus.FIXED);
+    }
+
     // Methods (GpsModule)
 
     @Override
     public void start(Activity activity, GpsStatusListener listener) {
         _listener = listener;
-
-        _gpsModuleStatus = new GpsModuleStatus();
-        _gpsModuleStatus.setLatitude(initialLatitude);
-        _gpsModuleStatus.setLongitude(initialLongitude);
-        _gpsModuleStatus.setStatus(GpsModuleStatus.FIXED);
-
-        // Send out initial position
+        // Send out position
         _listener.onGpsStatus(_gpsModuleStatus);
     }
 
