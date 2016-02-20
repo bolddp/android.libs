@@ -21,7 +21,7 @@ public class JsonTask extends AsyncTask<String, Integer, String> {
 
 	// Private variables
 
-	private static final int STD_TIMEOUT = 5000;
+	private static final int STD_TIMEOUT = 10000;
 	private static final String ENCODING = "UTF8";
 	private static final String USER_AGENT = "JsonTask/1.0";
 	private static final String CONTENT_TYPE = "application/json";
