@@ -29,7 +29,6 @@ public class BitmapTask extends AsyncTask<String, Integer, Bitmap> {
         HttpURLConnection httpCon = null;
         Bitmap bitmap = null;
         InputStream is = null;
-
         try {
             URL url = new URL(params[0]);
             httpCon = (HttpURLConnection) url.openConnection();
