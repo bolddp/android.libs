@@ -2,7 +2,6 @@ package idimsoftware.www.androidcommon;
 
 import android.graphics.Bitmap;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.InstrumentationTestCase;
 import android.util.Log;
 
 import com.idimsoftware.www.androidcommon.web.BitmapTask;
