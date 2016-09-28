@@ -84,7 +84,12 @@ public class GpsModuleStatus {
 
     public float getAccuracy() { return _location.getAccuracy(); }
 
+    public void setAccuracy(float accuracy) {
+        _location.setAccuracy(accuracy);
+    }
+
     public float getBearing() { return _location.getBearing(); }
 
     public Location getLocation() { return _location; }
+
 }

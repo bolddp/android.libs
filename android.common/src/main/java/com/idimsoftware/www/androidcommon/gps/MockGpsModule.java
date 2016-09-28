@@ -1,7 +1,6 @@
 package com.idimsoftware.www.androidcommon.gps;
 
 import android.app.Activity;
-import android.location.Location;
 
 /**
  * Created by Daniel on 2015-11-29.
@@ -11,6 +10,7 @@ public class MockGpsModule implements GpsModule {
 
     private final float initialLatitude = 57.732308F;
     private final float initialLongitude = 14.114135F;
+    private final float fixedAccuracy = 8.0F;
 
     private GpsStatusListener _listener;
     private GpsModuleStatus _gpsModuleStatus;
@@ -20,6 +20,7 @@ public class MockGpsModule implements GpsModule {
         _gpsModuleStatus = new GpsModuleStatus();
         _gpsModuleStatus.setLatitude(initialLatitude);
         _gpsModuleStatus.setLongitude(initialLongitude);
+        _gpsModuleStatus.setAccuracy(fixedAccuracy);
         _gpsModuleStatus.setStatus(GpsModuleStatus.FIXED);
     }
 
@@ -50,6 +51,7 @@ public class MockGpsModule implements GpsModule {
     public void setLocation(float latitude, float longitude) {
         _gpsModuleStatus.setLatitude(latitude);
         _gpsModuleStatus.setLongitude(longitude);
+        _gpsModuleStatus.setAccuracy(fixedAccuracy);
 
         _listener.onGpsStatus(_gpsModuleStatus);
     }
