@@ -47,7 +47,7 @@ public class BitmapTask extends AsyncTask<String, Integer, Bitmap> {
             errorMessage = e.getMessage();
             return  null;
         }
-            finally {
+        finally {
             try {
                 if (httpCon != null)
                     httpCon.disconnect();

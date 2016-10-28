@@ -30,15 +30,14 @@ public class JsonTask extends AsyncTask<String, Integer, String> {
 	private String _httpVerb;
 	private JsonTaskListener _listener;
 	private Object _postData;
-	private int _responseCode;
 
-	// Private methods
-	
+	protected int _responseCode;
+
 	/*
 	 * Creates a WebServiceError object and returns it as a JSON string which is returned
 	 * to the IJsonTaskListener.
 	 */
-	private String SerializeWebError(int responseCode, int errorCode, String errorMessage) {
+	protected String SerializeWebError(int responseCode, int errorCode, String errorMessage) {
 		JsonTaskError error = new JsonTaskError();
 		error.HttpStatusCode = responseCode;
 		error.Id = errorCode;
