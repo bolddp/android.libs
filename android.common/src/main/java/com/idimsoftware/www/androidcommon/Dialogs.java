@@ -1,5 +1,6 @@
 package com.idimsoftware.www.androidcommon;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,10 +10,22 @@ import android.content.DialogInterface;
  */
 public class Dialogs {
 
+    /**
+     * Checks to make sure that the context isn't a finishing activity, because then
+     * the dialog shouldn't be displayed.
+     */
+    private static boolean isContextFinishing(Context context) {
+        return (context instanceof Activity) && ((Activity)context).isFinishing();
+    }
+
     /*
- * Displays an error-message in an alert-dialog with an OK button
- */
+    * Displays an error-message in an alert-dialog with an OK button
+    */
     public static void displayError(Context context, String header, String message, String okButtonText, DialogInterface.OnClickListener listener) {
+        if (isContextFinishing(context)) {
+            return;
+        }
+
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(message).setTitle(header).setCancelable(false)
                 .setNeutralButton(okButtonText, listener);
@@ -27,6 +40,10 @@ public class Dialogs {
      * Displays an info-message in an alert-dialog with an OK button
      */
     public static void displayInfo(Context context, String header, String message, String okButtonText, DialogInterface.OnClickListener listener) {
+        if (isContextFinishing(context)) {
+            return;
+        }
+
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(message).setTitle(header).setCancelable(false)
                 .setNeutralButton(okButtonText, listener);
@@ -44,6 +61,10 @@ public class Dialogs {
                                     String yesButtonText, String noButtonText,
                                     DialogInterface.OnClickListener yesListener,
                                     DialogInterface.OnClickListener noListener){
+        if (isContextFinishing(context)) {
+            return;
+        }
+
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(message).setTitle(header).setCancelable(false)
                 .setPositiveButton(yesButtonText, yesListener)

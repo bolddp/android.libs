@@ -108,7 +108,12 @@ public class JsonTask extends AsyncTask<String, Integer, String> {
 
 				return sb.toString();
 			} finally {
-				inStream.close();
+                try {
+                    // This may sometimes throw an exception
+                    inStream.close();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
 			}
 
 		} catch (IOException e) {
